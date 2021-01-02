@@ -9,6 +9,11 @@ def main(request):
         template_name = 'myapp/index.html'
         return render(request, template_name)
 
+def bmi(request):
+    if(request.method == 'GET'):
+        template_name = 'myapp/bmi.html'
+        return render(request, template_name)
+
 def submit(request):
     if request.method == "POST":
         form_obj = Newsletter_form(data=request.POST)
